@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/5eb2c51ffb.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <nav id="navbar" class="nav">
+        <ul>
+            <li>
+                <a href="#welcome-section">About</a>
+            </li>
+            <li>
+                <a href="#projects">Work</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Second Section-->
+
+    <section id="welcome-section">
+        <div class="left-column">
+            <h1 style="
+            padding-right: 30%;
+        ">Hey</h1><h1>I'm Alwin</h1>
+           <p style="
+           font-size: larger;
+           font-weight: bolder;
+       "><i id="dynamic-text" style="
+                   padding-left: 47%;
+               " font-size="larger;" font-weight="bolder;">A cyber newbie</i></p>
+        </div>
+        <div class="right-column">
+            <div class="welcome-gif">
+                <img src="https://images.squarespace-cdn.com/content/v1/5769fc401b631bab1addb2ab/1541580611624-TE64QGKRJG8SWAIUS7NS/coding-freak.gif" 
+                alt="Coding Freak" style="width: 500px; height: 300px;">
+              </div><br><br>
+            <p>Hello! I'm Alwin, a vibrant 20-year-old pursuing a Bachelor
+                 of Computer Applications with a deep-seated passion for cybersecurity and 
+                 the thrilling world of bug hunting. <br>
+                  Beautiful things takes time.</p>
+        </div>
+      </section>
+      <script>
+        const phrases = ["A cyber newbie", "A hacker", "A student", "A developer", "A script kiddie", "A noob"];
+        let currentPhrase = [];
+        let currentPhraseIndex = 0;
+        let letterIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
+      
+        function type() {
+          if (isEnd) {
+            return;
+          }
+      
+          if (isDeleting) {
+            // Reduce the currentPhrase letters
+            currentPhrase.pop();
+            letterIndex--;
+          } else {
+            // Add the next letter to the currentPhrase
+            currentPhrase.push(phrases[currentPhraseIndex][letterIndex]);
+            letterIndex++;
+          }
+      
+          // Update the DOM element
+          document.getElementById('dynamic-text').textContent = currentPhrase.join('');
+      
+          if (!isDeleting && letterIndex === phrases[currentPhraseIndex].length) {
+            // End of a word, start deleting
+            isDeleting = true;
+            setTimeout(type, 1000); // Wait a bit before starting to delete
+          } else if (isDeleting && letterIndex === 0) {
+            // Start typing the next word
+            currentPhrase = [];
+            isDeleting = false;
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            setTimeout(type, 200); // Shorter delay before typing next word
+          } else {
+            // Type or delete
+            let typingSpeed = 200;
+            if (isDeleting) {
+              typingSpeed /= 2; // Delete at twice the speed of typing
+            }
+            setTimeout(type, typingSpeed);
+          }
+        }
+      
+        // Start the typing effect on load
+        document.addEventListener("DOMContentLoaded", function() {
+          // Initial delay before typing starts
+          setTimeout(type, 1000);
+        });
+      </script>
+      
+
+      <section id="projects" class="project-section" style="
+      padding-top: 1px;
+      background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+      ">
+          <h2 class="projects-section-header">My write up and projects</h2>
+  
+  
+          <div class="cards-wrapper">
+              <div class="container">
+                <div class="wrapper">
+                  <div class="banner-image">
+                    <img src="data:image/png;base64,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" alt="Banner" style="width: 100%; height: 300px; border-radius: 12px;">
+                  </div>             
+                  <h1 style="font-family: 'Righteous', sans-serif; color: rgba(255,255,255,0.98); 
+                  text-transform: uppercase; font-size: 2.4rem;">Over pass writeup </h1>
+                  <p style="color: #fff; font-family: 'Lato', sans-serif; text-align: center;
+                   font-size: 0.8rem; line-height: 150%; letter-spacing: 2px;
+                    text-transform: uppercase;">writeup<br></p>
+                </div>
+                <div class="button-wrapper">
+                  <button class="btn outline" onclick="location.href='your-link-url';">3 min</button>
+                  <button class="btn fill" onclick="location.href='https://medium.com/@mysticraganork66/try-hack-me-overpass-f615e5281f6a';">READ NOW</button>                </div>
+              </div>
+            
+              <div class="container">
+                <div class="wrapper">
+                  <div class="banner-image">
+                    <img src="data:image/png;base64,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" alt="Banner" style="width: 100%; height: 300px; border-radius: 12px;">
+                  </div>
+                  <h1 style="font-family: 'Righteous', sans-serif; color: rgba(255,255,255,0.98); 
+                  text-transform: uppercase; font-size: 2.4rem;">mac changer</h1>
+                  <p style="color: #fff; font-family: 'Lato', sans-serif; text-align: center;
+                   font-size: 0.8rem; line-height: 150%; letter-spacing: 2px; text-transform: uppercase;">
+                   To change mac<br>of device</p>
+                </div>
+                <div class="button-wrapper">
+                  <button class="btn outline" onclick="location.href='your-link-url';">DETAILS</button>
+                  <button class="btn fill" onclick="location.href='https://github.com/azarado-006/mac-changer.git';">TRY NOW</button>
+                </div>
+              </div>
+            </div>
+            <div class="cards-wrapper">
+              <div class="container">
+                <div class="wrapper">
+                  <div class="banner-image">
+                    <img src="data:image/jpeg;base64,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" alt="Banner" style="width: 100%; height: 300px; border-radius: 12px;">
+                  </div>             
+                  <h1 style="font-family: 'Righteous', sans-serif; color: rgba(255,255,255,0.98); 
+                  text-transform: uppercase; font-size: 2.4rem;">Location finder</h1>
+                  <p style="color: #fff; font-family: 'Lato', sans-serif; text-align: center;
+                   font-size: 0.8rem; line-height: 150%; letter-spacing: 2px;
+                    text-transform: uppercase;">To find location<br>using ip address</p>
+                </div>
+                <div class="button-wrapper">
+                  <button class="btn outline" onclick="location.href='your-link-url';">DETAILS</button>
+                  <button class="btn fill" onclick="location.href='https://github.com/azarado-006/geoip.git';">TRY NOW</button>
+                </div>
+              </div>
+            
+              <div class="container">
+                <div class="wrapper">
+                  <div class="banner-image">
+                    <img src="https://miro.medium.com/v2/resize:fit:1252/format:webp/0*TUPa5dMHQP_IpCec.jpg" alt="Banner" style="width: 100%; height: 300px; border-radius: 12px;">
+                  </div>
+                  <h1 style="font-family: 'Righteous', sans-serif; color: rgba(255,255,255,0.98);
+                   text-transform: uppercase; font-size: 2.4rem;">The Metaverse</h1>
+                  <p style="color: #fff; font-family: 'Lato', sans-serif; text-align: center;
+                   font-size: 0.8rem; line-height: 150%; letter-spacing: 2px;
+                    text-transform: uppercase;">Beyond Reality<br>Digital Universe</p>
+                </div>
+                <div class="button-wrapper">
+                  <button class="btn outline" onclick="location.href='your-link-url';">7 mins</button>
+                  <button class="btn fill" onclick="location.href='https://medium.com/@mysticraganork66/beyond-reality-the-metaverse-a-digital-universe-unfolding-94cf8cf788fc';">READ NOW</button>
+                </div>
+              </div>
+            </div>
+  
+          
+      </section>
+       
+
+
+    <!-- Third Section-->
+
+
+    <section id="contact" class="contact-section">
+        <div class="contact-section-header">
+            <h2 id="con">Let's keep connection</h2>
+            <p>always keep updated</p>
+        </div>
+        <div class="form">
+            <form id="form" action="your-server-side-script-url" method="post">
+                <input type="email" id="email" placeholder="Your Email Address" name="email" required /><br>
+                <button type="submit" id="submit" class="btn contact-submit">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+
+
+        <div class="contact-links">
+            <a href="https://www.instagram.com/apostophe_s" target="_blank" class="btn contact-details"><i class="fab fa-instagram"></i></a>
+            <a id="profile-link" href="https://github.com/azarado-006" target="_blank" class="btn contact-details"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/alwin joshy" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i></a>
+            <a href="tel:00303030303" target="_blank" class="btn contact-details"><i class="fas fa-mobile-alt"></i></a>
+        </div>
+    </section>
+
+    <!-- END CONTACT SECTION -->
+
+    <!-- START FOOTER SECTION -->
+
+    <footer>
+        <p id="foot">
+            &copy;2024@
+            <a id="fot" href="https://www.linkedin.com/in/Alwin joshy/" target="_blank">alwin joshy
+            </a>
+        </p>
+    </footer>
+
+    <!-- END FOOTER SECTION -->
+
+</body>
+
+</html>
