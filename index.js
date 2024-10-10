@@ -1,42 +1,42 @@
-const phrases = ["A cyber newbie", "A hacker", "A student", "A developer", "A script kiddie", "A noob"];
-let currentPhrase = [];
-let currentPhraseIndex = 0;
-let letterIndex = 0;
-let isDeleting = false;
-let isEnd = false;
+// Wait for the document to be ready
+$(document).ready(function() {
 
-function type() {
-  if (isEnd) {
-    return;
-  }
-
-  if (isDeleting) {
-    currentPhrase.pop();
-    letterIndex--;
-  } else {
-    currentPhrase.push(phrases[currentPhraseIndex][letterIndex]);
-    letterIndex++;
-  }
-
-  document.getElementById('dynamic-text').textContent = currentPhrase.join('');
-
-  if (!isDeleting && letterIndex === phrases[currentPhraseIndex].length) {
-    isDeleting = true;
-    setTimeout(type, 1000);
-  } else if (isDeleting && letterIndex === 0) {
-    currentPhrase = [];
-    isDeleting = false;
-    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-    setTimeout(type, 200);
-  } else {
-    let typingSpeed = 200;
-    if (isDeleting) {
-      typingSpeed /= 2;
+  // Transition effect for navbar and back-to-top icon
+  $(window).scroll(function() {
+    // checks if window is scrolled more than 500px, adds/removes solid class
+    if ($(this).scrollTop() > 550) {
+      $('.navbar').addClass('solid');
+      $('.back-to-top').addClass('visible');
+    } else {
+      $('.navbar').removeClass('solid');
+      $('.back-to-top').removeClass('visible');
     }
-    setTimeout(type, typingSpeed);
-  }
-}
+  });
 
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(type, 1000);
+  // Scrolling effect for Arrow icons
+  $("#scrollIcon").click(function(e) {
+    e.preventDefault();
+    $.scrollTo($("#about"), 1000);
+  });
+
+  $("#nav-about").click(function(e) {
+    e.preventDefault();
+    $.scrollTo($("#about"), 1000);
+  });
+
+  $("#nav-portfolio").click(function(e) {
+    e.preventDefault();
+    $.scrollTo($("#portfolio"), 1000);
+  });
+
+  $("#nav-contact").click(function(e) {
+    e.preventDefault();
+    $.scrollTo($("#contact"), 1000);
+  });
+
+  $(".navbar-brand").click(function(e) {
+    e.preventDefault();
+    $.scrollTo(0, 1000);
+  });
+
 });
