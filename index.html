@@ -1,56 +1,181 @@
-```
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="(link unavailable)">
-  <script src="(link unavailable)" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Neon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #1A1D23;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        
+        .landing-page {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .landing-page h1 {
+            font-size: 48px;
+            color: #03A9F4;
+        }
+        
+        .landing-page p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .write-up-section {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .write-up-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #03A9F4;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: #2C2F33;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .card button {
+            background-color: #03A9F4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .contact-section {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #03A9F4;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+        }
+        
+        .contact-links a {
+            margin: 10px;
+            font-size: 24px;
+            color: #03A9F4;
+        }
+        
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="(link unavailable)">
 </head>
 <body>
-  <nav id="navbar" class="nav">
-    <ul>
-      <li><a href="#welcome-section">About</a></li>
-      <li><a href="#projects">Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="welcome-section">
-    <div class="left-column">
-      <h1 style="padding-right: 30%;">Hey</h1>
-      <h1>I'm Alwin</h1>
-      <p style="font-size: larger; font-weight: bolder;">
-        <i id="dynamic-text" style="padding-left: 47%;"></i>
-      </p>
+    <div class="landing-page">
+        <h1>Welcome to Dark Neon</h1>
+        <p>A place for tech enthusiasts</p>
     </div>
-    <div class="right-column">
-      <div class="welcome-gif">
-        <img src="" alt="Coding Freak" style="width: 500px; height: 300px;">
-      </div>
-      <br><br>
-      <p>Hello! I'm Alwin, a vibrant 20-year-old pursuing a Bachelor of Computer Applications with a deep-seated passion for cybersecurity and the thrilling world of bug hunting. 
-        <br> Beautiful things takes time.</p>
-    </div>
-  </section>
-
-  <section id="projects" class="project-section" style="padding-top: 1px; background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);">
-    <h2 class="projects-section-header">My write up and projects</h2>
-    <div class="cards-wrapper">
-      <div class="container">
-        <div class="wrapper">
-          <div class="banner-image">
-            <img src="" alt="Banner Image">
-          </div>
+    
+    <div class="write-up-section">
+        <h2>Write-ups</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="image1.jpg" alt="Image 1">
+                <h3>Write-up 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>Read More</button>
+            </div>
+            <div class="card">
+                <img src="image2.jpg" alt="Image 2">
+                <h3>Write-up 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>Read More</button>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+    
+    <div class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-links">
+          
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
+        </div>
+    </div>
 
-  <script src="index.js"></script>
+    <script>
+        // Typing effect
+        var typed = new Typed('.landing-page h1', {
+            strings: ['Welcome to Dark Neon', 'A place for tech enthusiasts'],
+            typeSpeed: 40,
+            backSpeed: 20,
+            backDelay: 1500,
+            loop: true
+        });
+
+        // Card button click event
+        document.querySelectorAll('.card button').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Read more button clicked!');
+            });
+        });
+    </script>
 </body>
 </html>
-```
+
+
