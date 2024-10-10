@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Neon</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
     <style>
+        /* Global Styles */
+        
         * {
             margin: 0;
             padding: 0;
@@ -18,38 +20,73 @@
             font-family: Arial, sans-serif;
         }
         
-        .landing-page {
+        .nav {
+            background-color: #2C2F33;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav ul li {
+            margin: 0 1rem;
+        }
+        
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        #welcome-section {
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            background-color: #03A9F4;
         }
         
-        .landing-page h1 {
-            font-size: 48px;
-            color: #03A9F4;
-        }
-        
-        .landing-page p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        
-        .write-up-section {
-            padding: 50px;
+        .left-column {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         
-        .write-up-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #03A9F4;
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 2rem;
         }
         
-        .card-container {
+        .welcome-gif {
+            width: 500px;
+            height: 300px;
+        }
+        
+        #dynamic-text {
+            font-size: larger;
+            font-weight: bolder;
+        }
+        
+        .project-section {
+            padding-top: 1px;
+            background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+        }
+        
+        .projects-section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .cards-wrapper {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -64,43 +101,11 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         
-        .card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px 10px 0 0;
-        }
-        
-        .card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        
-        .card p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        
-        .card button {
-            background-color: #03A9F4;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
         .contact-section {
             padding: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        
-        .contact-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #03A9F4;
         }
         
         .contact-links {
@@ -116,66 +121,116 @@
         }
         
         @media (max-width: 768px) {
-            .card-container {
-                flex-direction: column;
+            .right-column {
+                margin-left: 0;
             }
         }
     </style>
     <link rel="stylesheet" href="(link unavailable)">
 </head>
 <body>
-    <div class="landing-page">
-        <h1>Welcome to Dark Neon</h1>
-        <p>A place for tech enthusiasts</p>
+    <nav id="navbar" class="nav">
+        <ul>
+            <li>
+                <a href="#welcome-section">About</a>
+            </li>
+            <li>
+                <a href="#projects">Work</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Second Section-->
+    <section id="welcome-section">
+        <div class="left-column">
+            <h1 style="padding-right: 30%;">Hey</h1>
+            <h1>I'm Alwin</h1>
+            <p style="font-size: larger; font-weight: bolder;">
+                <i id="dynamic-text" style="padding-left: 47%;" font-size="larger;" font-weight="bolder;"></i>
+            </p>
+        </div>
+        <div class="right-column">
+            <div class="welcome-gif">
+                <img src="" alt="Coding Freak" style="width: 500px; height: 300px;">
+            </div>
+            <br>
+            <br>
+            <p>Hello! I'm Alwin, a vibrant 20-year-old pursuing a Bachelor of Computer Applications with a deep-seated passion for cybersecurity and the thrilling world of bug hunting. 
+        Beautiful things takes time.</p>
     </div>
-    
-    <div class="write-up-section">
-        <h2>Write-ups</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="image1.jpg" alt="Image 1">
-                <h3>Write-up 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button>Read More</button>
-            </div>
-            <div class="card">
-                <img src="image2.jpg" alt="Image 2">
-                <h3>Write-up 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button>Read More</button>
-            </div>
+</section>
+
+<section id="projects" class="project-section" style="padding-top: 1px; background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); ">
+    <h2 class="projects-section-header">My write up and projects</h2>
+    <div class="cards-wrapper">
+        <div class="card">
+            <img src="image1.jpg" alt="Image 1">
+            <h3>Write-up 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="image2.jpg" alt="Image 2">
+            <h3>Write-up 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button>Read More</button>
         </div>
     </div>
-    
-    <div class="contact-section">
-        <h2>Contact Me</h2>
-        <div class="contact-links">
-          
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
-        </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
     </div>
+</section>
 
-    <script>
-        // Typing effect
-        var typed = new Typed('.landing-page h1', {
-            strings: ['Welcome to Dark Neon', 'A place for tech enthusiasts'],
-            typeSpeed: 40,
-            backSpeed: 20,
-            backDelay: 1500,
-            loop: true
-        });
+<script>
+    const phrases = ["A cyber newbie", "A hacker", "A student", "A developer", "A script kiddie", "A noob"];
+    let currentPhrase = [];
+    let currentPhraseIndex = 0;
+    let letterIndex = 0;
+    let isDeleting = false;
+    let isEnd = false;
 
-        // Card button click event
-        document.querySelectorAll('.card button').forEach(button => {
-            button.addEventListener('click', () => {
-                alert('Read more button clicked!');
-            });
-        });
-    </script>
+    function type() {
+        if (isEnd) {
+            return;
+        }
+        if (isDeleting) {
+            currentPhrase.pop();
+            letterIndex--;
+        } else {
+            currentPhrase.push(phrases[currentPhraseIndex][letterIndex]);
+            letterIndex++;
+        }
+        document.getElementById('dynamic-text').textContent = currentPhrase.join('');
+        if (!isDeleting && letterIndex === phrases[currentPhraseIndex].length) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+        } else if (isDeleting && letterIndex === 0) {
+            currentPhrase = [];
+            isDeleting = false;
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            setTimeout(type, 200);
+        } else {
+            let typingSpeed = 200;
+            if (isDeleting) {
+                typingSpeed /= 2;
+            }
+            setTimeout(type, typingSpeed);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(type, 1000);
+    });
+</script>
 </body>
 </html>
-
-
