@@ -4,143 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cybersecurity Enthusiast</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 36px;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    #dynamic-text {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .hero {
-      background-image: url("hero-background.jpg"); /* Replace with your hero image */
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-    }
-
-    .hero-content {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .btn {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #0056b2;
-    }
-
-    #about, #projects, #contact {
-      padding: 40px;
-      background-color: #f0f0f0;
-    }
-
-    .project-card {
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .social-icons a {
-      margin: 0 10px;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .social-icons a:hover {
-      color: #666;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <header>
-    <h1>Cybersecurity Enthusiast</h1>
-    <p id="dynamic-text"></p>
-  </header>
 
-  <section class="hero">
-    <img src="hero-background.jpg" alt="Hero Image">
-    <div class="hero-content">
-      <h2>Welcome to my digital portfolio!</h2>
-      <p>I'm passionate about cybersecurity and dedicated to protecting the digital world.</p>
-      <a href="#about" class="btn">Learn More</a>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Your Name</a> </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li id="nav-about"><a href="#about">About</a></li>
+          <li id="nav-portfolio"><a href="#portfolio">Portfolio</a></li>
+          <li id="nav-contact"><a href="#contact">Contact</a></li>
+        </ul>
+      </div></div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row cover top">
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="col-xs-12 headline">
+            <h1 class="text-center">Hi, I'm [Your Name]</h1> <p class="lead text-center">A Passionate Cybersecurity Professional</p> </div>
+          <div class="col-xs-12 center-block text-center">
+            <a href="#about"><span id="scrollIcon" class="front-glyph glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div id="about" class="row cover">
+      <h2 class="text-center">About Me</h2>
+      <div class="row">
+        <div class="col-md-6 text-center about-info">
+          <img class="img-circle text-center profile-img" src="your_image.jpg"> <p class="text-center">I'm a skilled cybersecurity professional with a strong foundation in [Your Education] and a proven track record in CTF competitions. My expertise lies in:</p>
+          <ul>
+            <li>[Programming Skill 1]: [Brief Description]</li>
+            <li>[Programming Skill 2]: [Brief Description]</li>
+            <li>[Cybersecurity Tool 1]: [Brief Description]</li>
+            <li>[Cybersecurity Tool 2]: [Brief Description]</li>
+            <li>Problem-solving: Identifying and addressing security vulnerabilities.</li>
+            <li>Continuous Learning: Staying updated with the latest cybersecurity trends.</li>
+            <li>Teamwork: Collaborating effectively with colleagues.</li>
+          </ul>
+        </div>
+        <div class="col-md-6 about-tools"> <p class="text-center">Here's a few of the tools I use</p>
+          <div class="col-xs-6">
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Javascript</li>
+              <li>Bootstrap</li>
+              <li>Foundation</li>
+            </ul>
+          </div>
+         <section id="projects">
+  <h2>Projects</h2>
+  <div class="project-card">
+    <img src="project1.jpg" alt="Project 1">
+    <h3>Project 1: Secure Web Application</h3>
+    <p>Developed a secure web application using Django and Python...</p>
+    <a href="#" class="btn">View Project</a>
+  </div>
   </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a skilled cybersecurity professional with a strong foundation in BCA and a proven track record in CTF competitions. My expertise lies in:</p>
-    <ul>
-      <li>Programming: Python, Java, C++</li>
-      <li>Cybersecurity Tools: Metasploit, Nmap, Nessus</li>
-      <li>Problem-solving: Identifying and addressing security vulnerabilities.</li>
-      <li>Continuous Learning: Staying updated with the latest cybersecurity trends.</li>
-      <li>Teamwork: Collaborating effectively with colleagues.</li>
-    </ul>
-  </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Let's connect! Feel free to reach out via:</p>
+  <ul class="social-icons">
+    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+    <li><a href="#"><i class="fab fa-github"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+  </ul>
+</section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <img src="project1.jpg" alt="Project 1">
-      <h3>Project 1: Secure Web Application</h3>
-      <p>Developed a secure web application using Django and Python...</p>
-      <a href="#" class="btn">View Project</a>
-    </div>
-    </section>
+<footer>
+  <p>&copy; 2023 Your Name. All rights reserved.</p>
+</footer>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Let's connect! Feel free to reach out via:</p>
-    <ul class="social-icons">
-      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="#"><i class="fab fa-github"></i></a></li>
-      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-    </ul>
-  </section>
-
-  <script src="script.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
