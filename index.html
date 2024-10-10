@@ -1,236 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alwin's Portfolio</title>
     <style>
-        /* Global Styles */
-        
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f0f0f0;
         }
         
-        body {
-            background-color: #1A1D23;
-            color: #fff;
-            font-family: Arial, sans-serif;
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
         
-        .nav {
-            background-color: #2C2F33;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        h1, h2 {
+            margin: 0;
         }
         
-        .nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
-        .nav ul li {
-            margin: 0 1rem;
+        .section {
+            margin-bottom: 40px;
         }
         
-        .nav a {
-            color: #fff;
+        .project {
+            margin-bottom: 20px;
+        }
+        
+        .project h3 {
+            margin-bottom: 10px;
+        }
+        
+        .project a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .contact ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .contact ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        .contact ul li a {
+            color: #1a1a1a;
             text-decoration: none;
         }
         
-        #welcome-section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: #03A9F4;
-        }
-        
-        .left-column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 2rem;
-        }
-        
-        .welcome-gif {
-            width: 500px;
-            height: 300px;
-        }
-        
-        #dynamic-text {
-            font-size: larger;
-            font-weight: bolder;
-        }
-        
-        .project-section {
-            padding-top: 1px;
-            background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-        }
-        
-        .projects-section-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .cards-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .card {
-            background-color: #2C2F33;
-            width: 300px;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .contact-section {
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .contact-links {
-            display: flex;
-            justify-content: space-between;
-            width: 200px;
-        }
-        
-        .contact-links a {
-            margin: 10px;
-            font-size: 24px;
-            color: #03A9F4;
-        }
-        
-        @media (max-width: 768px) {
-            .right-column {
-                margin-left: 0;
-            }
-        }
+        /* Additional CSS styles can be added here */
     </style>
-    <link rel="stylesheet" href="(link unavailable)">
 </head>
 <body>
-    <nav id="navbar" class="nav">
-        <ul>
-            <li>
-                <a href="#welcome-section">About</a>
-            </li>
-            <li>
-                <a href="#projects">Work</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Second Section-->
-    <section id="welcome-section">
-        <div class="left-column">
-            <h1 style="padding-right: 30%;">Hey</h1>
-            <h1>I'm Alwin</h1>
-            <p style="font-size: larger; font-weight: bolder;">
-                <i id="dynamic-text" style="padding-left: 47%;" font-size="larger;" font-weight="bolder;"></i>
-            </p>
+    <header>
+        <h1>Hey, I'm Alwin</h1>
+        <p>Hello! I'm Alwin, a vibrant 20-year-old pursuing a Bachelor of Computer Applications with a deep-seated passion for cybersecurity and the thrilling world of bug hunting. Beautiful things take time.</p>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <h2>About Me</h2>
+            <p>As a cybersecurity enthusiast, I'm constantly seeking knowledge and hands-on experience in the field. My areas of interest include:</p>
+            <ul>
+                <li>Penetration testing</li>
+                <li>Vulnerability assessment</li>
+                <li>Web development</li>
+                <li>Artificial intelligence</li>
+            </ul>
         </div>
-        <div class="right-column">
-            <div class="welcome-gif">
-                <img src="" alt="Coding Freak" style="width: 500px; height: 300px;">
+        
+        <div class="section">
+            <h2>Skills</h2>
+            <p>I possess a diverse range of skills that enable me to tackle various challenges in the tech field:</p>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, Java, C++</li>
+                <li><strong>Web Development Frameworks:</strong> Django, Flask</li>
+                <li><strong>Operating Systems:</strong> Windows, Linux</li>
+                <li><strong>Cybersecurity Tools:</strong> Nmap, Metasploit</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>My Writeups and Projects</h2>
+            <div class="project">
+                <h3>Project Title 1</h3>
+                <p>A brief description of the project goes here. It can cover the main technologies used and the impact it made.</p>
+                <a href="#">View Project</a>
             </div>
-            <br>
-            <br>
-            <p>Hello! I'm Alwin, a vibrant 20-year-old pursuing a Bachelor of Computer Applications with a deep-seated passion for cybersecurity and the thrilling world of bug hunting. 
-        Beautiful things takes time.</p>
-    </div>
-</section>
-
-<section id="projects" class="project-section" style="padding-top: 1px; background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); ">
-    <h2 class="projects-section-header">My write up and projects</h2>
-    <div class="cards-wrapper">
-        <div class="card">
-            <img src="image1.jpg" alt="Image 1">
-            <h3>Write-up 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>Read More</button>
+            <div class="project">
+                <h3>Project Title 2</h3>
+                <p>A brief description of the project goes here. It can cover the main technologies used and the impact it made.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project Title 3</h3>
+                <p>A brief description of the project goes here. It can cover the main technologies used and the impact it made.</p>
+                <a href="#">View Project</a>
+            </div>
         </div>
-        <div class="card">
-            <img src="image2.jpg" alt="Image 2">
-            <h3>Write-up 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>Read More</button>
+        
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Intern:</strong> Cybersecurity Firm (Summer 2022)</li>
+                <li>Participated in various bug bounty programs.</li>
+                <li>Developed a web application using Django, enhancing my practical knowledge.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Education</h2>
+            <p>Bachelor of Computer Applications, XYZ University (2020-2023)</p>
+        </div>
+        
+        <div class="section">
+            <h2>Contact Me</h2>
+            <p>If you would like to connect or have any inquiries, feel free to reach out!</p>
+            <ul class="contact">
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="mailto:example@email.com">Email</a></li>
+                <li><a href="#">Medium</a></li>
+            </ul>
         </div>
     </div>
-</section>
-
-<section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <div class="contact-links">
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-medium"></i></a>
-    </div>
-</section>
-
-<script>
-    const phrases = ["A cyber newbie", "A hacker", "A student", "A developer", "A script kiddie", "A noob"];
-    let currentPhrase = [];
-    let currentPhraseIndex = 0;
-    let letterIndex = 0;
-    let isDeleting = false;
-    let isEnd = false;
-
-    function type() {
-        if (isEnd) {
-            return;
-        }
-        if (isDeleting) {
-            currentPhrase.pop();
-            letterIndex--;
-        } else {
-            currentPhrase.push(phrases[currentPhraseIndex][letterIndex]);
-            letterIndex++;
-        }
-        document.getElementById('dynamic-text').textContent = currentPhrase.join('');
-        if (!isDeleting && letterIndex === phrases[currentPhraseIndex].length) {
-            isDeleting = true;
-            setTimeout(type, 1000);
-        } else if (isDeleting && letterIndex === 0) {
-            currentPhrase = [];
-            isDeleting = false;
-            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-            setTimeout(type, 200);
-        } else {
-            let typingSpeed = 200;
-            if (isDeleting) {
-                typingSpeed /= 2;
-            }
-            setTimeout(type, typingSpeed);
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(type, 1000);
-    });
-</script>
+    
+    <script>
+        // JavaScript code can be added here for dynamic functionality
+    </script>
 </body>
 </html>
