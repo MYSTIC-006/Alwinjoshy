@@ -1,98 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<htmllang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cybersecurity Enthusiast</title>
-  <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>portfolio</title>
 </head>
 <body>
-
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Your Name</a> </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li id="nav-about"><a href="#about">About</a></li>
-          <li id="nav-portfolio"><a href="#portfolio">Portfolio</a></li>
-          <li id="nav-contact"><a href="#contact">Contact</a></li>
-        </ul>
-      </div></div>
-  </nav>
-
-  <div class="container-fluid">
-    <div class="row cover top">
-      <div class="col-xs-12">
-        <div class="row">
-          <div class="col-xs-12 headline">
-            <h1 class="text-center">Hi, I'm [Your Name]</h1> <p class="lead text-center">A Passionate Cybersecurity Professional</p> </div>
-          <div class="col-xs-12 center-block text-center">
-            <a href="#about"><span id="scrollIcon" class="front-glyph glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-          </div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <span>Alwin</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="">Skill</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="">Service</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="">Contact</a></div>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <div id="about" class="row cover">
-      <h2 class="text-center">About Me</h2>
-      <div class="row">
-        <div class="col-md-6 text-center about-info">
-          <img class="img-circle text-center profile-img" src="your_image.jpg"> <p class="text-center">I'm a skilled cybersecurity professional with a strong foundation in [Your Education] and a proven track record in CTF competitions. My expertise lies in:</p>
-          <ul>
-            <li>[Programming Skill 1]: [Brief Description]</li>
-            <li>[Programming Skill 2]: [Brief Description]</li>
-            <li>[Cybersecurity Tool 1]: [Brief Description]</li>
-            <li>[Cybersecurity Tool 2]: [Brief Description]</li>
-            <li>Problem-solving: Identifying and addressing security vulnerabilities.</li>
-            <li>Continuous Learning: Staying updated with the latest cybersecurity trends.</li>
-            <li>Teamwork: Collaborating effectively with colleagues.</li>
-          </ul>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"> </i>
+        <div class="dropdown">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Skills</a>
+            <a href="">Service</a>
+            <a href="">Contact</a>
+            <i class="fa-solid fa-xmark cancel" onclick="cancel()"> </i>
         </div>
-        <div class="col-md-6 about-tools"> <p class="text-center">Here's a few of the tools I use</p>
-          <div class="col-xs-6">
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Javascript</li>
-              <li>Bootstrap</li>
-              <li>Foundation</li>
-            </ul>
-          </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="3000">
+                <img src="main.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="100">Hey I'm<span> ALWIN</span></h1>
+                <h2 class="typing-text" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="900">I'm a <span></span></h2>
+                <p  data-aos="flip-up" data-aos-duration="1500" data-aos-delay="1100">a vibrant 20-year-old pursuing a Bachelor of Computer Applications with a deep-seated passion for cybersecurity and the thrilling world of bug hunting.
+                </p>
+                <div class="social-links">
+                    <a href="" data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1200"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""  data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href=""  data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-medium"></i></a>
+                    <a href=""  data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-facebook"></i></a>
+                </div>      
+                <div class="btn"  data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1700">
+                    <button>Download CV</button>
+                </div>      
+            </div>
         </div>
-      </div>
-    </div>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project 1: Secure Web Application</h3>
-        <p>Developed a secure web application using Django and Python...</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
     </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Let's connect! Feel free to reach out via:</p>
-      <ul class="social-icons">
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fab fa-github"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-      </ul>
-    </section>
-
-    <footer>
-      <p>&copy; 2023 Your Name. All rights reserved.</p>
-    </footer>
-
-    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.left = "0";
+        }
+        function cancel() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.left = "-250px";
+        }
+    </script>
 </body>
 </html>
