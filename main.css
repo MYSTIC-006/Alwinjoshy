@@ -1,37 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:wght@100,200,300,400,500,600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     background-color: black;
 }
+
 nav {
     width: 100%;
     height: 10vh;
     position: sticky;
 }
+
 .nav-container {
     width: 100%;
     height: 100%;
     display: flex;
     padding-left: 100px;
-    padding-right: 200px;
+    padding-right: 400px;
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-container .logo span{
     font-size: 2.5rem;
     font-weight: bold;
     color: rgb(255, 255, 255);
 }
-.hamburg,
-.cancel {
+
+.hamburg, .cancel {
     cursor: pointer;
     position: absolute;
     right: 15px;
@@ -40,10 +45,12 @@ nav {
     font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
     display: none;
 }
+
 .nav-container .links {
     display: flex;
     gap: 30px;
 }
+
 .nav-container .links a {
     font-size: 1.2rem;
     color: white;
@@ -52,10 +59,12 @@ nav {
     font-weight: 550;
     transition: 0.3s linear;
 }
+
 .nav-container .links a:hover {
     color: rgb(0, 204, 221);
     border-bottom: 2px solid rgb(0, 204, 221);
 }
+
 .dropdown {
     z-index: 10;
     position: fixed;
@@ -72,6 +81,7 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
 .dropdown a {
     color: white;
     text-decoration: none;
@@ -80,13 +90,16 @@ nav {
     text-align: center;
     transition: 0.3s linear;
 }
+
 .dropdown a:hover {
     background-color:rgb(0, 204, 221);
 }
+
 section {
     width: 100%;
     height: 90vh;
 }
+
 .main-container {
     width: 100%;
     height: 100%;
@@ -94,17 +107,23 @@ section {
     justify-content: space-evenly;
     align-items: center;
 }
+
 .main-container .image {
     width: 500px;
-    height: 80vh;
+    height:500px;
+    
     overflow: hidden;
+    border-radius: 50%;
 }
+
 .main-container .image img {
     width: 100%;
 }
+
 .main-container .image img:hover {
     animation: animate 1.5s ease-in-out infinite;
 }
+
 @keyframes animate {
     0% {
         scale: 1;
@@ -116,32 +135,40 @@ section {
         scale: 1;
     }
 }
+
 .main-container .content {
     color: white;
     width: 40%;
     min-height: 100px;
 }
+
 .content h1 {
     font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
 }
-.content p{
-    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+
+
+.content p {
+    font-size: 2 rem; /* Adjust the font size as needed */
+    margin: 10px 0;
 }
 .content h1 span {
     font-weight: 700;
     text-shadow: 0 0 10px rgb(0, 204, 221);
     color: rgb(0, 204, 221);
 }
+
 .typing-text {
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 700;
     position: relative;
 }
+
 .typing-text span::before {
     content: "";
     color: rgb(0, 204, 221);
     animation: words 20s infinite;
 }
+
 .typing-text span::after {
     content: "";
     background-color: black;
@@ -152,17 +179,19 @@ section {
     right: -8;
     animation: cursor 0.5s infinite;
 }
+
 @keyframes cursor {
     to {
         border-left: 3px solid white;
     }
 }
+
 @keyframes words {
     0%, 20% {
         content: " student";
     }
     21%, 40% {
-        content: "Ethical  hacker";
+        content: "Ethical hacker";
     }
     41%, 60% {
         content: " developer";
@@ -174,10 +203,12 @@ section {
         content: " cyber newbie";
     }
 }
+
 .content p {
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
     margin: 10px 0;
 }
+
 .social-links i {
     display: inline-flex;
     justify-content: center;
@@ -192,12 +223,14 @@ section {
     font-size: 1.5rem;
     transition: 0.2s linear;
 }
+
 .social-links i:hover {
     scale: 1.3;
     filter: drop-shadow(0 0 10px rgb(0, 204, 221));
     background-color: rgb(0, 204, 221);
     color: white;
 }
+
 .content button {
     width: 50%;
     height: 6vh;
@@ -211,6 +244,7 @@ section {
     border-radius: 5px;
     transition: 0.2s linear;
 }
+
 .content button:hover {
     scale: 1.1;
     border: 2px solid rgb(0, 204, 221);
@@ -218,6 +252,7 @@ section {
     background-color: transparent;
     box-shadow: 0 0 40px 5px rgb(0, 204, 221);
 }
+
 @media (max-width: 884px) {
     nav .logo {
         position: absolute;
@@ -232,8 +267,7 @@ section {
     .nav-container .links {
         display: none;
     }
-    .hamburg,
-    .cancel {
+    .hamburg, .cancel {
         display: block;
     }
     .main-container .content {
@@ -254,6 +288,7 @@ section {
         height: 60%;
     }
 }
+
 @media (max-width: 440px) {
     .main-container .image {
         width: 70%;
@@ -266,3 +301,31 @@ section {
         margin-top: 15px;
     }
 }
+
+.shuffle-text {
+    transition: transform 0.5s ease-in-out;
+}
+
+.shuffle-text:hover {
+    transform: translateX(-50%) translateX(calc(var(--iteration) * 20px));
+    --iteration: 0;
+    animation: shuffle 0.5s linear infinite;
+}
+
+@keyframes shuffle {
+    from {
+        --iteration: 0;
+    }
+    to {
+        --iteration: 200;
+    }
+}
+
+#playButton {
+    position: absolute;
+    bottom: 1008px;
+    right: 1860px;
+    border-radius: 25px; /* Adjust the value to control the oval shape */
+    width: 50px; /* Adjust the width */
+    height: 30px; /* Adjust the height */
+  }
