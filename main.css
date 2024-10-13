@@ -25,7 +25,7 @@ nav {
     height: 100%;
     display: flex;
     padding-left: 100px;
-    padding-right: 400px;
+    padding-right: 200px;
     justify-content: space-between;
     align-items: center;
 }
@@ -34,6 +34,7 @@ nav {
     font-size: 2.5rem;
     font-weight: bold;
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .hamburg, .cancel {
@@ -146,11 +147,11 @@ section {
     font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
 }
 
-
 .content p {
-    font-size: 2 rem; /* Adjust the font size as needed */
+    font-size: 1.2rem; /* Adjust the font size as needed */
     margin: 10px 0;
 }
+
 .content h1 span {
     font-weight: 700;
     text-shadow: 0 0 10px rgb(0, 204, 221);
@@ -231,6 +232,14 @@ section {
     color: white;
 }
 
+.contact-social-links {
+    margin-top: 20px;
+}
+
+.contact-social-links i {
+    margin: 10px 20px;
+}
+
 .content button {
     width: 50%;
     height: 6vh;
@@ -253,11 +262,50 @@ section {
     box-shadow: 0 0 40px 5px rgb(0, 204, 221);
 }
 
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: rgb(0, 204, 221);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: rgb(0, 180, 200);
+}
+
 @media (max-width: 884px) {
     nav .logo {
         position: absolute;
         top: 16px;
-        left: 15px;
+        left: 14px;
         font-size: 1.5rem;
     }
     .main-container {
@@ -278,6 +326,7 @@ section {
         width: 2.5rem;
         height: 2.5rem;
         font-size: 1.5rem;
+        
     }
     .typing-text {
         font-size: 2rem;
@@ -328,4 +377,6 @@ section {
     border-radius: 25px; /* Adjust the value to control the oval shape */
     width: 50px; /* Adjust the width */
     height: 30px; /* Adjust the height */
-  }
+}
+
+
